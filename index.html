@@ -11,20 +11,27 @@
 </head>
 <body>
 <a-scene>
+ <a-assets>
+    <img id="sky" src="backround3.jpg">
+  </a-assets>
 
  <a-entity geometry="primitive: sphere; width: 2; height: 9"
            position="0 20 -100"
            material="transparent: true; color: yellow"
            dynamic-body></a-entity>
 
- <a-entity geometry="primitive: plane; height: 1000; width: 1000"
+
+ <a-entity geometry="primitive: plane; height: 500; width: 500"
            position="0 -3 -4"
            rotation="-77 0 0"
-           material="color: green"
+           material="color: #backround3.jpg "
            static-body></a-entity>
 
- <a-sky color="#ECECEC"></a-sky>
+  <a-sky src="#sky"
+  			></a-sky>
+<a-entity camera look-controls position="0 2 0"></a-entity>
 
-</a-scene>
+</a-scene> 
 </body>
 </html>
+
