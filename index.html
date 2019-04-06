@@ -11,42 +11,36 @@
 </head>
 <body>
 <a-scene>
+	<a-assets>
+    <a-asset-item id="sheep-obj" src="https://raw.githubusercontent.com/Ekulina/Rolling-Cheese/sheep/assets/sheep/10047_Sheep_v1_iterations-2.obj"></a-asset-item>
+    <a-asset-item id="sheep-mtl" src="https://raw.githubusercontent.com/Ekulina/Rolling-Cheese/sheep/assets/sheep/10047_Sheep_v1_iterations-2.mtl"></a-asset-item>
+  </a-assets>
  <a-assets>
     <img id="sky" src="backround3.jpg">
   </a-assets>
 
  <a-entity geometry="primitive: sphere; width: 2; height: 9"
-           position="0 20 -100"
+           position="0 25 -96"
            material="transparent: true; color: yellow"
            dynamic-body></a-entity>
 
-
-
+<a-entity
+rotation="-77 0 0">
+<a-entity obj-model="obj: #sheep-obj; mtl: #sheep-mtl"
+  			position="-0.5 1.5 -0.5"
+  			rotation="0 20 0"
+  			scale="0.007 0.007 0.007"></a-entity>
  <a-entity geometry="primitive: plane; height: 1000; width: 1000"
-           position="0 -3 -4"
-           rotation="-77 0 0"
+           position="0 0 0"
+           
            material="color: green "
            static-body></a-entity>
-                   
+                   </a-entity>
   <a-assets>
     <img id="backround3" src="backround3.jpg">
   </a-assets>
   <a-sky src="#backround3"></a-sky>
-<a-plane position="0 0 0" rotation="0 0 0" width="40" height="40" color="#7BC8A4" shadow></a-plane>
 
-<a-assets>
-    <a-asset-item id="sheep-obj" src="https://raw.githubusercontent.com/Ekulina/Rolling-Cheese/sheep/assets/sheep/10047_Sheep_v1_iterations-2.obj"></a-asset-item>
-    <a-asset-item id="sheep-mtl" src="https://raw.githubusercontent.com/Ekulina/Rolling-Cheese/sheep/assets/sheep/10047_Sheep_v1_iterations-2.mtl"></a-asset-item>
-  </a-assets>
-
-  <a-entity obj-model="obj: #sheep-obj; mtl: #sheep-mtl"
-  			position="-0.5 1.5 -0.5"
-  			rotation="-77 20 0"
-  			scale="0.007 0.007 0.007"
-
-
-
-  ></a-entity>
 
 
 </a-scene>
