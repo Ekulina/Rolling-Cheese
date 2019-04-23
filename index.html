@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
- <title>ECS - A-Frame School</title>
+ <title>rolling_cheese</title>
  <meta name="description" content="ECS - A-Frame School">
  <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
  <!-- Animation script -->
@@ -11,32 +11,77 @@
 </head>
 <body>
 <a-scene>
+  <a-assets>
+    <a-asset-item id="sheep-obj" src="https://raw.githubusercontent.com/Ekulina/Rolling-Cheese/sheep/assets/sheep/10047_Sheep_v1_iterations-2.obj"></a-asset-item>
+    <a-asset-item id="sheep-mtl" src="https://raw.githubusercontent.com/Ekulina/Rolling-Cheese/sheep/assets/sheep/10047_Sheep_v1_iterations-2.mtl"></a-asset-item>
+<!-- lill -->
+    <a-asset-item id="flower-obj" src="https://raw.githubusercontent.com/Ekulina/Rolling-Cheese/sheep/assets/sunflower/DR293GUXZXKK16RTKE4Y8HOCH.obj"></a-asset-item>
+    <a-asset-item id="flower-mtl" src="https://raw.githubusercontent.com/Ekulina/Rolling-Cheese/sheep/assets/sunflower/DR293GUXZXKK16RTKE4Y8HOCH.mtl"></a-asset-item>
+<!-- mees -->
+    <a-asset-item id="man-obj" src="https://raw.githubusercontent.com/Ekulina/Rolling-Cheese/sheep/assets/man/46SF7OMWZ595754M4SMTEP8SE.obj"></a-asset-item>
+    <a-asset-item id="man-mtl" src="https://raw.githubusercontent.com/Ekulina/Rolling-Cheese/sheep/assets/man/46SF7OMWZ595754M4SMTEP8SE.mtl"></a-asset-item>
+  </a-assets>
+ <a-assets>
+    <img id="sky" src="backround3.jpg">
+  </a-assets>
 
- <a-entity geometry="primitive: sphere; width: 2; height: 9"
-           position="0 20 -100"
+ <a-entity geometry="primitive: sphere; width: 5; height: 12"
+           position="0 25 -96"
            material="transparent: true; color: yellow"
            dynamic-body></a-entity>
 
+<a-entity
+rotation="-77 0 0">
+<a-entity obj-model="obj: #sheep-obj; mtl: #sheep-mtl"
+        position="0 202 0.6"
+        ></a-entity>
+<!-- teine ja kolmas lammas -->
+<a-entity obj-model="obj: #sheep-obj; mtl: #sheep-mtl"
+        position="-4 5 -0.05"
+        scale="0.07 0.07 0.07"
+        ></a-entity>
+
+<a-entity obj-model="obj: #sheep-obj; mtl: #sheep-mtl"
+        position="-7 -3 0.6"
+        rotation="-22 8 75"
+        scale="0.07 0.07 0.07"
+        ></a-entity>
+<!-- jutumull lambale -->
+<a-entity
+  text="width: 4; value: Watch out for 
+  rolling cheese!"
+  position="0.3 2.2 0.6"
+  rotation="55 30 34"></a-entity>
+
+<!-- 
+<a-entity position="0 2 1" geometry="primitive: box" visible="false" material="color: orange; transparent: true"
+animation__color="property: visible; to: true; dur: 2000;">
+</a-entity> -->
+
+
+<!-- lill -->
+<a-entity obj-model="obj: #flower-obj; mtl: #flower-mtl"
+        position="3 2 1.6"
+        rotation="63 91 85"
+        ></a-entity>
+<!-- päevitaja -->
+<a-entity obj-model="obj: #man-obj; mtl: #man-mtl"
+        position="4 0.9 0.9"
+        rotation="50 -85 -86"
+        ></a-entity>
+
+
  <a-entity geometry="primitive: plane; height: 1000; width: 1000"
-           position="0 -3 -4"
-           rotation="-77 0 0"
-           material="color: green"
+           position="0 0 0"
+           
+           material="color: green "
+           
            static-body></a-entity>
-
- <a-sky color="#ECECEC"></a-sky>
-
-
-<a-assets>
-    <a-asset-item id="sheep-obj" src="https://raw.githubusercontent.com/Ekulina/Rolling-Cheese/sheep/assets/sheep/10047_Sheep_v1_iterations-2.obj"></a-asset-item>
-    <a-asset-item id="sheep-mtl" src="https://raw.githubusercontent.com/Ekulina/Rolling-Cheese/sheep/assets/sheep/10047_Sheep_v1_iterations-2.mtl"></a-asset-item>
+                   </a-entity>
+  <a-assets>
+    <img id="backround3" src="backround3.jpg">
   </a-assets>
-
-  <a-entity obj-model="obj: #sheep-obj; mtl: #sheep-mtl"
-  			position="-0.5 1.5 -0.5"
-  			rotation="-77 20 0"
-  			scale="0.007 0.007 0.007"
-
-  ></a-entity>
+  <a-sky src="#backround3"></a-sky>
 
 
 </a-scene>
